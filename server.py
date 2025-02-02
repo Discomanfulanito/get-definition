@@ -33,8 +33,3 @@ def define():
 
 if __name__ == "__main__":
     app.run()  
-
-
-
-
-

@@ -1,4 +1,4 @@
-Flask==2.3.2
-Flask-Cors==4.0.0
-openai==0.27.8
-gunicorn==20.1.0
+Flask
+Flask-Cors
+openai
+gunicorn
