@@ -4,7 +4,7 @@ from openai import OpenAI
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r"/define": {"origins":"chrome-extensions:// hpcoifddgehildncbdlodgjbhallplkb"}})
+CORS(app, resources={r"/define": {"origins":"chrome-extensions://hpcoifddgehildncbdlodgjbhallplkb"}})
 
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY"))
 
@@ -27,6 +27,7 @@ def define():
                 }
             ]
         )
+        print(completion.choices[0].message.content)
         return jsonify({"definition": completion.choices[0].message.content}), 200
     else:
         return jsonify({"error": "Faltan parámetros: 'word' y 'sentence'"}), 400
