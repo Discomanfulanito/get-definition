@@ -24,7 +24,7 @@ def define():
                 {"role": "developer", "content": "You are a helpful assistant."},
                 {
                     "role": "user",
-                    "content": f"Explain the meaning of the word '{word}' in the sentence '{sentence}' in {lang}, be concise"
+                    "content": f"Explain the meaning of the word '{word}' in '{sentence}' in {lang}, be concise, explain the root of the word and the particles (if any)"
                 }
             ]
         )
